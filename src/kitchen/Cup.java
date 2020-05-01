@@ -9,8 +9,8 @@ public class Cup {
 
     }
     public Cup( String liquidName, Integer liquidVolume ){
-        this.liquidName = liquidName;
-        this.liquidVolume = liquidVolume;
+        setLiquidName(liquidName);
+    	setLiquidVolume(liquidVolume);
     }
     
     //-----------GETTERS------------//
@@ -35,8 +35,5 @@ public class Cup {
 			this.liquidVolume = liquidVolume;
 		else
 			System.err.println("INCORRECT VOLUME!");
-	}
-
-    
-
+	}    
 }
