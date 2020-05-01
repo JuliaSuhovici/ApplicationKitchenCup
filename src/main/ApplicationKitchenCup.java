@@ -6,8 +6,8 @@ public class ApplicationKitchenCup {
 		Cup cupA = new Cup("Milk", 300);
 		Cup cupB = new Cup("Water", 500);
 		
-		cupA.setLiquidVolume(250);  //pouring out 50ml of milk
-		cupB.setLiquidVolume(550);  //adding 50ml of water
+		cupA.setLiquidVolume(cupA.getLiquidVolume()-50);  //pouring out 50ml of milk
+		cupB.setLiquidVolume(cupB.getLiquidVolume()+50);  //adding 50ml of water
 		
 		System.out.println("------Cup A------");
 		System.out.println("Liquid Name: " + cupA.getLiquidName());
