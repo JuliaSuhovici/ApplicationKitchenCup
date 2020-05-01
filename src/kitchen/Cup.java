@@ -24,7 +24,7 @@ public class Cup {
 	
 	//-----------SETTERS-----------//
 	public void setLiquidName(String liquidName) {
-		if(liquidName == "Water" || liquidName == "Milk" || liquidName == "Tea")
+		if(liquidName.equals("Water") || liquidName.equals("Milk") || liquidName.equals("Tea"))
 			this.liquidName = liquidName;
 		else
 			System.err.println("FORBIDDEN LIQUID!");
