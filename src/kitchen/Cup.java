@@ -2,7 +2,7 @@ package kitchen;
 
 public class Cup {
 	private String liquidName;
-    private Integer liquidVolume;
+    protected Integer liquidVolume;
 
   //---------CONSTRUCTORS------------//
     public Cup(){
