@@ -1,8 +1,6 @@
 package kitchen;
 
 public class BigCup extends Cup{
-	//PROPERTY
-	private Integer liquidVolume;
 	
 	//---------CONSTRUCTORS------------//
 	public BigCup() {
