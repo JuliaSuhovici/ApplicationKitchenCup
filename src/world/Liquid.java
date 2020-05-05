@@ -53,23 +53,14 @@ public class Liquid {
 	//-----METHODS-----//
 	
 	public boolean isCold() {
-		if(temperature != null && temperature <= 18) 
-			return true;
-		else 
-			return false;
+		return temperature <= 18;
 	}
 	
-	public boolean isWarm() {
-		if(temperature != null && temperature > 18 && temperature <= 36) 
-			return true;
-		else 
-			return false;
+	public boolean isWarm() { 
+		return temperature > 18 && temperature <= 36;
 	}
 	
 	public boolean isHot() {
-		if(temperature != null && temperature > 36) 
-			return true;
-		else 
-			return false;
+		return temperature > 36;
 	}
 }
