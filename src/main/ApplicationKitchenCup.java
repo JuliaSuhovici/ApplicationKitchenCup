@@ -35,7 +35,6 @@ public class ApplicationKitchenCup {
 		//-------LIQUID------//
 		Liquid firstLiquid = new Liquid("Water", 250, 40);
 		Liquid secondLiquid = new Liquid("Milk", -90, 12); //ERROR: WRONG VOLUME
-		Liquid thirdLiquid = new Liquid("Coffee", 150, -2);//ERROR: WRONG TEMPERATURE
 		
 		System.out.println("//Info about liquids://");
 		
@@ -44,15 +43,12 @@ public class ApplicationKitchenCup {
 		System.out.println("Volume: " + firstLiquid.getVolume());
 		System.out.println("Temperature: " + firstLiquid.getTemperature());
 		
+		secondLiquid.setVolume(100);
+		
 		System.out.println("------Second Liquid------");
 		System.out.println("Name: " + secondLiquid.getName());
 		System.out.println("Volume: " + secondLiquid.getVolume());
 		System.out.println("Temperature: " + secondLiquid.getTemperature());
-		
-		System.out.println("------Third Liquid------");
-		System.out.println("Name: " + thirdLiquid.getName());
-		System.out.println("Volume: " + thirdLiquid.getVolume());
-		System.out.println("Temperature: " + thirdLiquid.getTemperature());
 		
 		System.out.println();
 		if(firstLiquid.isHot()) System.out.println(firstLiquid.getName() + " is HOT! The temperature is " + firstLiquid.getTemperature()); //true
