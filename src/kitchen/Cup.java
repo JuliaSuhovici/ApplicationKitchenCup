@@ -1,39 +1,47 @@
 package kitchen;
+import world.Liquid;
 
-public class Cup {
-	private String liquidName;
-    protected Integer liquidVolume;
+public class Cup{
 
-  //---------CONSTRUCTORS------------//
-    public Cup(){
+	private Liquid liquid;
+	private final static Integer MAX_VOLUME = 600;
+	
+	//---------CONSTRUCTORS------------//
+	
+	public Cup(){}
+	
+	public Cup(String name, Integer volume, Integer temperature){
+		liquid = new Liquid(name, temperature);
+		setLiquid(volume);
+	 }
 
-    }
-    public Cup( String liquidName, Integer liquidVolume ){
-        setLiquidName(liquidName);
-    	setLiquidVolume(liquidVolume);
-    }
-    
-    //-----------GETTERS------------//
-	public String getLiquidName() {
-		return liquidName;
+	 //-----------GETTERS-----------//
+	
+	public static Integer getMaxVolume() {
+		return MAX_VOLUME;
 	}
 	
-	public Integer getLiquidVolume() {
-		return liquidVolume;
+	public Liquid getLiquid() {
+		return liquid;
 	}
-	
+
 	//-----------SETTERS-----------//
-	public void setLiquidName(String liquidName) {
-		if(liquidName.equals("Water") || liquidName.equals("Milk") || liquidName.equals("Tea"))
-			this.liquidName = liquidName;
+	public void setLiquid(Integer volume) {
+		if(volume <= MAX_VOLUME)
+			liquid.setVolume(volume);
 		else
-			System.err.println("FORBIDDEN LIQUID!");
+			System.err.println("WRONG VOLUME!");
 	}
 	
-	public void setLiquidVolume(Integer liquidVolume) {
-		if(liquidVolume >= 0 && liquidVolume <= 600)
-			this.liquidVolume = liquidVolume;
-		else
-			System.err.println("INCORRECT VOLUME!");
-	}    
+	//-----------METHODS-----------//
+	public Integer getLiquidVolume() {
+		return liquid.getVolume();
+	}
+	
+	public void print() {
+		System.out.println("//-------Info about cup:--------//");
+		System.out.println("Liquid: " + liquid.getName());
+		System.out.println("Volume: " + liquid.getVolume());
+		System.out.println("Temperature: " + liquid.getTemperature());
+	}
 }
