@@ -27,9 +27,9 @@ public class Cup{
 	public void setLiquid(Integer volume) {
 		setLiquid(liquid, volume);
 	}
-	public void setLiquid(Liquid newLiquid, Integer maxVolume) {
-		if(newLiquid.getVolume() <= maxVolume)
-			liquid = newLiquid;
+	public void setLiquid(Liquid liquid, Integer maxVolume) {
+		if(liquid.getVolume() <= maxVolume)
+			this.liquid = liquid;
 		else
 			System.err.println("WRONG VOLUME!");
 	}
