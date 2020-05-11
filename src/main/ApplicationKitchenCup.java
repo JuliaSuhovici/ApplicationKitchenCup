@@ -1,6 +1,6 @@
 package main;
 import kitchen.*;
-import world.Liquid;
+import world.*;
 
 public class ApplicationKitchenCup {
 	public static void main(String[] args) {
